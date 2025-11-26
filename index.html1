@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocolastic 4 - Single Page (Gaming Theme)</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F715AB; /* Pink */
+            color: #FFFFFF; /* White text */
+        }
+
+        /* Header styles */
+        header {
+            background-color: #34EDF3; /* Dark Teal */
+            color: #FFFFFF;
+            text-align: left;
+            padding: 1em;
+            border-bottom: 2px solid #F715AB; /* Pink accent */
+        }
+
+        .title-container {
+            display: flex;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #F715AB; /* Pink title */
+            margin-right: 20px;
+        }
+
+        header p {
+            margin: 0;
+        }
+
+        /* Navigation styles */
+        nav {
+            background-color: #34EDF3; /* Dark Teal */
+            color: #FFFFFF;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        nav a {
+            color: #F715AB; /* Pink links */
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #F715AB; /* Pink hover */
+            color: #FFFFFF;
+        }
+
+        /* Container styles */
+        .container {
+            padding: 20px;
+        }
+
+        /* Section styles */
+        section {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #F715AB; /* Pink */
+            border-radius: 5px;
+            border: 1px solid #34EDF3; /* Dark Teal border */
+        }
+
+        section h2 {
+            color: #34EDF3; /* Dark Teal */
+            text-align: center; /* Center the h2 text */
+        }
+
+        /* Home section styles */
+        #home {
+            text-align: center; /* Center the content */
+        }
+
+        #home p {
+            text-align: center; /* Center the paragraph text */
+        }
+
+        /* About section styles */
+        .about h3 {
+            color: #34EDF3; /* Dark Teal subheading */
+        }
+
+        .about ul {
+            list-style-type: none;
+            padding: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .about ul li {
+            margin-bottom: 5px;
+            color: #FFFFFF; /* White text */
+            width: 50%;
+            box-sizing: border-box;
+            padding: 5px;
+            margin-top: -5px;
+        }
+
+        #about .our-team-list li:nth-child(odd) {
+            float: left;
+            text-align: left;
+        }
+
+        #about .our-team-list li:nth-child(even) {
+            float: right;
+            text-align: right;
+        }
+
+        #about .our-team-list::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        #about .our-team-heading {
+            color: #34EDF3; /* Dark Teal */
+        }
+
+        .about-text {
+            color: #FFFFFF; /* White text */
+        }
+
+        /* Content section styles */
+        /* #content p {
+            color: #F715AB; /* Pink paragraph text */
+
+
+        .coming-soon {
+            color: #FFFFFF; /* White text */
+        }
+
+        /* Contact section styles */
+        #contact p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #contact img {
+            width: 20px;
+            height: auto;
+            margin-right: 5px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #34EDF3; /* Dark Teal */
+            color: #FFFFFF;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top: 2px solid #F715AB; /* Pink accent */
+        }
+
+        /* Utility class to hide sections */
+        .hidden {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="title-container">
+            <h1>Cocolastic 4</h1>
+        </div>
+        <p>Experience the next level of gaming fun!</p>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('about')">About</a>
+        <a href="#" onclick="showSection('content')">Content</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to Cocolastic 4! Get ready for the ultimate gaming experience.</p>
+        </section>
+
+        <section id="about" class="hidden about">
+            <h2>About Us</h2>
+
+            <h3>Who We Are</h3>
+            <p class="about-text">We Are A Group Consisting of 4 members and from Apec Schools North Fairview</p>
+
+            <h3>What We Do</h3>
+            <p class="about-text">We Create Roblox Gaming Content</p>
+
+            <h3 class="our-team-heading">Our Team</h3>
+            <ul class="our-team-list">
+                <li>Loussiana Hayes Lomansoc</li>
+                <li>Kira Janina Mikaela Castro</li>
+                <li>Agatha Domini Miraflor</li>
+                <li>Leiron Keith Monleon</li>
+            </ul>
+        </section>
+
+        <section id="content" class="hidden content">
+            <h2>Our Content</h2>
+            <p class="coming-soon">COMING SOON Our Content will be posted soon! Stay Tuned!!</p>
+        </section>
+
+        <section id="contact" class="hidden contact">
+            <h2>Contact Us</h2>
+            <p>
+                Contact us at
+                <img src="" alt="Phone icon">
+                09765985707
+            </p>
+        </section>
+
+    </div>
+
+    <footer>
+    </footer>
+
+    <script>
+        // Function to show a selected section and hide others
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.container > section');
+
+            sections.forEach(section => {
+                section.classList.add('hidden');
+            });
+
+            const sectionToShow = document.getElementById(sectionId);
+            sectionToShow.classList.remove('hidden');
+        }
+
+        // Show the 'home' section by default when the page loads
+        showSection('home');
+    </script>
+
+</body>
+</html>
+
+
+
+show website
